@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+}
+
+header {
+  display: flex;
+
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left_section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header img {
+  width: 100px;
+
+  margin-left: 30px;
+}
+
+header .links ul {
+  gap: 30px;
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+  font-weight: light;
+}
+
+ul li:hover {
+  color: tomato;
+}
+
+ul .home_link {
+  font-weight: bold;
+}
+
+header .links {
+  display: flex;
+  margin-right: 40px;
+  color: white;
+}
+
+header .search_icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+header .search_input {
+  padding-left: 5px;
+}
+
+/* -------------------------------- HERO */
+.hero {
+  width: 100%;
+  background-color: white;
+  /* border: 2px solid red; */
+}
+
+.hero_container {
+  /* border: 2px solid yellow; */
+  height: 700px;
+  position: relative;
+}
+
+.hero_overlay {
+  background-color: black;
+  height: 700px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.hero_image {
+  width: 100%;
+  object-fit: cover;
+  height: 700px;
+}
+
+.text_container {
+  /* border: 2px solid pink; */
+  position: absolute;
+  top: 200px;
+  left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero_title {
+  color: tomato;
+  font-size: 4rem;
+}
+
+.hero_description {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  width: 50%;
+  line-height: 1.6;
+}
+
+.btn_container {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn_play {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: black;
+  color: tomato;
+  border: 1px solid tomato;
+  border-radius: 5px;
+}
+
+.btn_trailer {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: black;
+  color: tomato;
+  border-radius: 5px;
+  border: 1px solid tomato;
+}
+
+.btn_play:hover,
+.btn_trailer:hover {
+  transform: scale(1.1);
+  transition: 0.35s;
+}
+
+/* -------------------------------- CARDS */
+
+.tv_shows {
+  position: relative;
+  padding: 40px;
+  /* overflow-x: auto; */
+}
+
+.card_element {
+  box-shadow: 5 1 4 white;
+  cursor: pointer;
+  /* filter: grayscale(0.7); */
+  transition: all 0.35s;
+}
+
+.card_element:hover {
+  filter: saturate(1.5);
+  transform: scale(1.2);
+}
+
+.most_popular,
+.top_rated,
+.upcoming {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  height: 300px;
+  width: 100%;
+  background-color: black;
+  overflow-x: auto;
+  margin-bottom: 40px;
+}
+
+main .h1_popular {
+  font-size: 2rem;
+  color: tomato;
+  padding-top: 30px;
+}
+
+main .h1_rated {
+  font-size: 2rem;
+  color: tomato;
+  padding-top: 40px;
+}
+
+main .h1_upcoming {
+  font-size: 2rem;
+  color: tomato;
+  padding-top: 40px;
+}
+
+.tv_image {
+  width: 150px;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: black;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: tomato;
+  border-radius: 10px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+
+  /* display: none; */
+}
+
+.modal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.modal_container {
+  height: 500px;
+  border-radius: 15px;
+  display: flex;
+  width: 700px;
+  background-color: white;
+  box-shadow: 0 0 8px black;
+}
+
+.modal_container img {
+  width: 400px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.modal_title {
+  font-size: 1.8rem;
+  color: tomato;
+}
+
+.modal_wrapper {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+
+.search_input {
+  outline: 0;
+}
+
+.search_section {
+  display: flex;
+}
+
+.search_section img {
+  width: 30px;
+  height: 30px;
+}
+
+footer {
+  height: 150px;
+  width: 100%;
+  background-color: black;
+  border-top: 0.2px solid tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer h3 {
+  color: tomato;
+}
+
+footer p {
+  color: white;
+}
